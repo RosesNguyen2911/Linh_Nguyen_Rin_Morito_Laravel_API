@@ -44,6 +44,7 @@ Route::post('/movies', [MovieController::class, 'store']);
  *  UPDATE: updating a resource
  */ 
 Route::patch('/movies/{movie}', [MovieController::class, 'update']);
+Route::patch('/characters/{character}', [CharacterController::class, 'update']);
 
 /**
  * 

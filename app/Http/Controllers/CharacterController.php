@@ -54,5 +54,30 @@ class CharacterController extends Controller
         return $character;
     }
 
+    /**
+     * Store a newly created character
+     *
+     * @return Character
+     */
+    public function store(Request $request)
+    {
+        $name = $request->input('name');
+        $house = $request->input('house');
+        $movieId = $request->input('movie_id');
+        $characterImage = $request->input('character_image');
+
+        $character = Character::make([
+            'name' => $name,
+            'house' => $house,
+            'movie_id' => $movieId,
+            'character_image' => $characterImage,
+        ]);
+
+        $character->save();
+
+        return $character;
+    }
+
+
 
 }
