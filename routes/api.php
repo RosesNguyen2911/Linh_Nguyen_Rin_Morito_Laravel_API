@@ -20,3 +20,10 @@ use Illuminate\Support\Facades\Route;
  * INDEX: list resources :check:
  */
 Route::get('/movies', [MovieController::class, 'index']);
+
+
+/**
+ * 
+ *  SHOW: single resource :check:
+ */ 
+Route::get('/Movies/{movie}', [MoiveController::class, 'show']);

@@ -48,4 +48,16 @@ class MovieController extends Controller
 
         return $movies;
     }
+
+
+    /**
+     * Show a specific movie
+     * @param Movie $movie
+     * @return Movie
+     */
+    public function show(Movie $movie)
+    {
+        return $movie;
+    }
 }
+
