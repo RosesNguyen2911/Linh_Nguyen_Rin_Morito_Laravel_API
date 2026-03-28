@@ -27,3 +27,10 @@ Route::get('/movies', [MovieController::class, 'index']);
  *  SHOW: single resource :check:
  */ 
 Route::get('/Movies/{movie}', [MoiveController::class, 'show']);
+
+
+/**
+ * 
+ *  STORE: create a new resource
+ */ 
+Route::post('/movies', [MovieController::class, 'store']);

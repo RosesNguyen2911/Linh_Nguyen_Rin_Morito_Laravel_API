@@ -52,11 +52,39 @@ class MovieController extends Controller
 
     /**
      * Show a specific movie
+     * 
      * @param Movie $movie
      * @return Movie
      */
     public function show(Movie $movie)
     {
+        return $movie;
+    }
+
+
+    /**
+     * Store a newly created movie
+     *
+     * @return Movie
+     */
+    public function store(Request $request)
+    {
+        $title = $request->input('title');
+        $description = $request->input('description');
+        $releaseYear = $request->input('release_year');
+        $director = $request->input('director');
+        $movieImage = $request->input('movie_image');
+
+        $movie = Movie::make([
+            'title' => $title,
+            'description' => $description,
+            'release_year' => $releaseYear,
+            'director' => $director,
+            'movie_image' => $movieImage,
+        ]);
+
+        $movie->save();
+
         return $movie;
     }
 }
