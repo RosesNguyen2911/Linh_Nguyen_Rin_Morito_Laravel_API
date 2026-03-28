@@ -13,10 +13,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // BookSeeder::class === Database\Seeders\BookSeeder
+        
         $this->call([
-            AuthorSeeder::class,
-            BookSeeder::class,
+            MovieSeeder::class,
         ]);
     }
 }
