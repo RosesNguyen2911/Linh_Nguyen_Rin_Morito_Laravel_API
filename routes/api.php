@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+/**
+ *  ::class prints the FQCN, which is       App\Http\Controllers\MovieController
+ * 
+ * INDEX: list resources :check:
+ */
+Route::get('/movies', [MovieController::class, 'index']);
