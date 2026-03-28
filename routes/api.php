@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 /*
