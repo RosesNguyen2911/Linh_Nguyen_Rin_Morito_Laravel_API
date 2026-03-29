@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * Movie Model
@@ -32,4 +33,14 @@ class Movie extends Model
         'director',
         'movie_image',
     ];
+
+    /**
+     * Get the characters for the movie
+     *
+     */
+    public function characters(): HasMany
+    {
+        return $this->hasMany(Character::class);
+    }
+
 }
