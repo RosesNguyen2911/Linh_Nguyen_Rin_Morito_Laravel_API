@@ -29,7 +29,7 @@ Route::get('/characters', [CharacterController::class, 'index']);
  * 
  *  SHOW: single resource :check:
  */ 
-Route::get('/Movies/{movie}', [MoiveController::class, 'show']);
+Route::get('movies/{movie}', [MovieController::class, 'show']);
 Route::get('/characters/{character}', [CharacterController::class, 'show']);
 
 

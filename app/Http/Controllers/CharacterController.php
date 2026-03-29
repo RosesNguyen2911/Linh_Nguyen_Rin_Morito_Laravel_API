@@ -33,14 +33,6 @@ class CharacterController extends Controller
             $charactersQuery->where('house', '=', $house);
         }
 
-        // --------------- Please check here ---------------
-        //  
-        // Do you think this way for house filter function will be better? in this way we can filter by similer letters
-
-        // if (!empty($house)) {
-        //     $charactersQuery->where('house', 'LIKE', '%' . $house . '%');
-        // }
-
 
         if ($movieId !== null) {
             $charactersQuery->where('movie_id', '=', $movieId);
